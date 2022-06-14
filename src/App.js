@@ -3,10 +3,27 @@ import { Cart } from './components/Cart';
 import { CartList } from './components/CartList';
 import './index.css';
 
-const items = [
-   { id: 1, name: 'Apple', price: 100, count: 1 },
-   { id: 2, name: 'Banan', price: 200, count: 1 },
-   { id: 3, name: 'Orange', price: 300, count: 1 },
+const questions = [
+   {
+      questionText: 'What is the capital of France?',
+      answers: ['New York', 'London', 'Paris', 'Dublin'],
+      correctAnswer: 'New York',
+   },
+   {
+      questionText: 'Who is CEO of Tesla?',
+      answers: ['Jeff Bezos', 'Elon Musk', 'Bill Gates', 'Tony Stark'],
+      correctAnswer: 'Elon Musk',
+   },
+   {
+      questionText: 'The iPhone was created by which company?',
+      answers: ['Apple', 'Intel', 'Amazon', 'Microsoft'],
+      correctAnswer: 'Apple',
+   },
+   {
+      questionText: 'How many Harry Potter books are there?',
+      answers: ['1', '4', '6', '7'],
+      correctAnswer: '7',
+   },
 ];
 
 export default function App() {
@@ -74,17 +91,5 @@ export default function App() {
       setCart([]);
    };
 
-   return (
-      <div className="App">
-         <CartList onAdd={onAddCart} items={items} />
-         <Cart
-            onPlusItem={plusItem}
-            onMinusItem={minusItem}
-            onRemove={onRemoveItem}
-            onClear={onClearItems}
-            cart={cart}
-            totalCount={totalCount}
-         />
-      </div>
-   );
+   return <div className="App"></div>;
 }
