@@ -50,6 +50,7 @@ export default function App() {
    };
 
    const restartQuiz = () => {
+      setIndex(0);
       setQuestions(questions);
       setShowResult(false);
       setCurrentAnswer('');
